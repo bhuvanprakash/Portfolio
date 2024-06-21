@@ -25,3 +25,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+// Animation on scroll
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+        }
+    });
+}, {
+    threshold: 0.1
+});
+
+document.querySelectorAll('.project-card').forEach(card => {
+    observer.observe(card);
+});
