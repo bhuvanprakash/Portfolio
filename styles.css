@@ -1,15 +1,15 @@
 body {
     scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
 }
 
 .header {
-    background: #151515 center center no-repeat;
-    background-size: cover;
+    background: url('assets/img/header-bg.jpg') no-repeat center center/cover;
     background-attachment: fixed;
+    position: relative;
 }
 
-.header::after {
-    content: "";
+.header-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -20,6 +20,7 @@ body {
 
 .header .text-container {
     z-index: 10;
+    color: white;
 }
 
 .header .social {
