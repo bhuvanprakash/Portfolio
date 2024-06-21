@@ -1,5 +1,5 @@
 function runTypingEffect() {
-    const text = "I am Bhuvan Prakash.";
+    const text = "I am Asim Abbasi.";
     const typingElement = document.getElementById("typing-text");
     const typingDelay = 100;
 
@@ -15,3 +15,13 @@ function typeText(text, typingElement, delay) {
 }
 
 document.addEventListener("DOMContentLoaded", runTypingEffect);
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+});
